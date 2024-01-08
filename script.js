@@ -126,7 +126,6 @@ function openWinnerPopup() {
 }
 
 function closePopup() {
-  restartGame();
   popup.classList.remove("open-popup");
 }
 
@@ -134,7 +133,8 @@ function restartGame() {
   boxes.forEach(box => {
     box.innerHTML = "";
   });
-  buttons.forEach((button) => button.disabled = false);
+  closePopup()
+  // buttons.forEach((button) => button.disabled = false);
 }
 
 let setTime = () => {
